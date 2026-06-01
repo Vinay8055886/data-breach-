@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BreachGuard | Contact Us</title>
+    <meta name="description" content="Get in touch with the BreachGuard team. We're here to help with questions about data breaches and your security.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">🛡️ BreachGuard</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p class="subtitle">Have a question or concern? We'd love to hear from you.</p>
+
+        <div class="card">
+            <form id="contact-form">
+                <div class="input-group">
+                    <input type="text" id="contact-name" placeholder="Your Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="contact-email" placeholder="Your Email Address" required>
+                </div>
+                <div class="input-group">
+                    <textarea id="contact-message" placeholder="Your Message..." rows="5" required></textarea>
+                </div>
+                <button type="submit" id="contact-btn">Send Message</button>
+            </form>
+            <div id="contact-result"></div>
+        </div>
+
+        <!-- Contact Info Row -->
+        <div class="stats-row" style="margin-top: 2rem;">
+            <div class="stat-card">
+                <span class="stat-number">📧</span>
+                <span class="stat-label">support@breachguard.io</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">🕐</span>
+                <span class="stat-label">24/7 Response Time</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">🌍</span>
+                <span class="stat-label">Available Worldwide</span>
+            </div>
+        </div>
+
+        <div class="footer" style="position: relative; bottom: auto; margin-top: 3rem;">
+            &copy; 2024 BreachGuard Systems. Secure Search.
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('contact-btn');
+            const result = document.getElementById('contact-result');
+
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+
+            await new Promise(r => setTimeout(r, 1200));
+
+            result.style.display = 'block';
+            result.className = 'safe';
+            result.innerHTML = `
+                <h3>✅ Message Sent!</h3>
+                <p>Thanks for reaching out. We'll get back to you within 24 hours.</p>
+            `;
+
+            btn.disabled = false;
+            btn.textContent = 'Send Message';
+            document.getElementById('contact-form').reset();
+        });
+    </script>
+</body>
+</html>

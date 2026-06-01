@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BreachGuard | Data Leak Checker</title>
+    <meta name="description" content="BreachGuard - Securely check if your personal data has been compromised in known data breaches.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">🛡️ BreachGuard</div>
+        <ul class="nav-links">
+            <li><a href="/" class="active">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>BreachGuard</h1>
+        <p class="subtitle">Securely check if your personal data has been compromised in known data breaches.</p>
+
+        <div class="card">
+            <form id="check-form">
+                <div class="input-group">
+                    <input type="text" id="user-input" placeholder="Enter Email or Phone Number" required>
+                </div>
+                <button type="submit" id="submit-btn">Check Status</button>
+            </form>
+
+            <div id="result"></div>
+        </div>
+
+        <div class="footer">
+            &copy; 2024 BreachGuard Systems. Secure Search.
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

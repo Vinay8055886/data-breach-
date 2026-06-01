@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BreachGuard | About Us</title>
+    <meta name="description" content="Learn about BreachGuard - our mission to protect your digital identity and keep your data safe.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">🛡️ BreachGuard</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about" class="active">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container container--wide">
+        <h1>About BreachGuard</h1>
+        <p class="subtitle">Our mission is to protect your digital identity and keep your personal data safe.</p>
+
+        <!-- Mission Card -->
+        <div class="card card--left">
+            <div class="card-icon">🎯</div>
+            <h2>Our Mission</h2>
+            <p>BreachGuard was built with one goal: to give everyday users instant visibility into whether their personal information — emails, phone numbers, and more — has been exposed in any known data breach. We believe everyone deserves to know if their data is at risk.</p>
+        </div>
+
+        <!-- How It Works Card -->
+        <div class="card card--left" style="margin-top: 2rem;">
+            <div class="card-icon">⚙️</div>
+            <h2>How It Works</h2>
+            <ul class="feature-list">
+                <li>
+                    <span class="feature-icon">1️⃣</span>
+                    <div>
+                        <strong>Enter Your Data</strong>
+                        <p>Type in your email address or phone number in the search box.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="feature-icon">2️⃣</span>
+                    <div>
+                        <strong>We Scan Our Database</strong>
+                        <p>Our engine cross-references your input against thousands of known breach records.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="feature-icon">3️⃣</span>
+                    <div>
+                        <strong>Instant Results</strong>
+                        <p>Within seconds, you get a clear report showing if your data was found in any breach.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Stats Row -->
+        <div class="stats-row">
+            <div class="stat-card">
+                <span class="stat-number">15B+</span>
+                <span class="stat-label">Records Indexed</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">Breaches Tracked</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Free to Use</span>
+            </div>
+        </div>
+
+        <!-- Privacy Card -->
+        <div class="card card--left" style="margin-top: 2rem;">
+            <div class="card-icon">🔒</div>
+            <h2>Your Privacy is Sacred</h2>
+            <p>We do <strong>not</strong> store any queries you make. Your email or phone is only used in-session to perform the check and is never saved, logged, or shared. BreachGuard is a privacy-first tool, built for you.</p>
+        </div>
+
+        <div class="footer" style="position: relative; bottom: auto; margin-top: 3rem;">
+            &copy; 2024 BreachGuard Systems. Secure Search.
+        </div>
+    </div>
+
+</body>
+</html>
